@@ -4,7 +4,7 @@
   "license": "MIT",
   "private": true,
   "scripts": {
-    "pages": "next-on-pages",
+    "pages:build": "next-on-pages",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -16,7 +16,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "beta",
+    "@cloudflare/next-on-pages": "^1.8.0",
     "@types/node": "^17.0.45",
     "@types/react": "^17.0.53",
     "autoprefixer": "^10.4.14",
