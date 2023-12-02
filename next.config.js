@@ -5,6 +5,6 @@ module.exports = {
   },
   experimental: {
     serverActions: true,
-    incrementalCacheHandlerPath: require.resolve('./cache-handler.js'),
+    // incrementalCacheHandlerPath: require.resolve('./cache-handler.js'),
   },
 };
