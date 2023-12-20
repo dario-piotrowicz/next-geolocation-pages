@@ -8,7 +8,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "pages:build": "npx @cloudflare/next-on-pages",
+    "pages:build": "npx @cloudflare/next-on-pages -m",
     "pages:deploy": "npm run pages:build && wrangler pages deploy .vercel/output/static",
     "pages:watch": "npx @cloudflare/next-on-pages --watch",
     "pages:dev": "npx wrangler pages dev .vercel/output/static --compatibility-date=2023-12-18 --compatibility-flag=nodejs_compat"
@@ -19,7 +19,7 @@
     "react-dom": "latest"
   },
   "devDependencies": {
-    "@cloudflare/next-on-pages": "^1.8.0",
+    "@cloudflare/next-on-pages": "https://prerelease-registry.devprod.cloudflare.dev/next-on-pages/runs/7276778053/npm-package-next-on-pages-606",
     "@types/node": "^17.0.45",
     "@types/react": "^17.0.53",
     "autoprefixer": "^10.4.14",

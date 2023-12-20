@@ -1,5 +1,5 @@
 class Supabase {
-  static #supabaseUrl = process.env.SUPABASE_REST_URL;
+  static #supabaseUrl = process.env.SUPABASE_REST_PROJECT_URL;
   static #supabaseKey = process.env.SUPABASE_KEY;
 
   static set = async (key, value) => {
@@ -74,7 +74,9 @@ module.exports = class CacheHandler {
   static #defaultTagsManifest = { version: 1, items: {} };
 
   constructor(options) {
-    this.#revalidatedTags = options.revalidatedTags;
+    // NOTE: the ?? [] shouldn't be necessary! this is an inconsistent behavior of
+    //       next-on-pages that needs to be amended (next build + next start don't require it)
+    this.#revalidatedTags = options.revalidatedTags ?? [];
   }
 
   async #getTagsManifest() {
