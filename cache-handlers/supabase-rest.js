@@ -74,9 +74,7 @@ module.exports = class CacheHandler {
   static #defaultTagsManifest = { version: 1, items: {} };
 
   constructor(options) {
-    // NOTE: the ?? [] shouldn't be necessary! this is an inconsistent behavior of
-    //       next-on-pages that needs to be amended (next build + next start don't require it)
-    this.#revalidatedTags = options.revalidatedTags ?? [];
+    this.#revalidatedTags = options.revalidatedTags;
   }
 
   async #getTagsManifest() {
