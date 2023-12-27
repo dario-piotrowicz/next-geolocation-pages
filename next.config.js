@@ -7,7 +7,7 @@ module.exports = (phase, { defaultConfig }) => {
   const nextConfig = {
     experimental: {
       fetchCacheKeyPrefix: "my-unused-fetch-cache-key-prefix",
-      incrementalCacheHandlerPath: getIncrementalCacheHandler('kv'),
+      incrementalCacheHandlerPath: getIncrementalCacheHandler(),
     },
   };
   return nextConfig;
