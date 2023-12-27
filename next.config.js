@@ -17,7 +17,7 @@ module.exports = (phase, { defaultConfig }) => {
  * @param {null|'supabase'|'kv'} handler
  */
 function getIncrementalCacheHandler(handler) {
-  if(handler === null) {
+  if(!handler) {
     return undefined;
   }
 
